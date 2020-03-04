@@ -6,7 +6,9 @@ library(rvest)
 # 'https://auto.naver.com/bike/lineup.nhn?bikeNo=5134'
 # 'https://auto.naver.com/bike/mnfcoMain.nhn?mnfcoNo=1'
 
-mnfco <- 'https://auto.naver.com/bike/mnfcoMain.nhn?mnfcoNo='
+
+auto_naver <- 'https://auto.naver.com'
+mnfco <- '/bike/mnfcoMain.nhn?mnfcoNo='
 x <- 17
 
 
@@ -26,3 +28,8 @@ html.bike_a <- html_nodes(html.bike_lst, 'a')
 
 
 links <- html_attr(html.bike_a, 'href')
+
+
+write.csv(links, "links.csv")
+
+
