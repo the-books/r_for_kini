@@ -8,11 +8,12 @@ library(rvest)
 
 
 auto_naver <- 'https://auto.naver.com'
-mnfco <- '/bike/mnfcoMain.nhn?mnfcoNo='
+mnfco_main <- '/bike/mnfcoMain.nhn?mnfcoNo='
+
 x <- 17
 
 
-mnfco_x <- paste0(mnfco, x)
+mnfco_x <- paste0(auto_naver, mnfco_main, x)
 
 
 html.mnfco_no <- read_html(mnfco_x)
